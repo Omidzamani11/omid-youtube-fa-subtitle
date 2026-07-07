@@ -1,0 +1,29 @@
+#omid-fa-subtitle-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: var(--omid-fa-bottom, 12%);
+  transform: translateX(-50%);
+  max-width: 84%;
+  padding: 7px 15px;
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  font-size: var(--omid-fa-font-size, 24px);
+  line-height: 1.65;
+  direction: rtl;
+  text-align: center;
+  z-index: 60;
+  pointer-events: none;
+  font-family: Tahoma, Arial, sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .95);
+  white-space: pre-wrap;
+}
+
+#omid-fa-subtitle-overlay.hidden {
+  display: none;
+}
+
+.html5-video-player.omid-fa-on .ytp-caption-window-container,
+.html5-video-player.omid-fa-on .caption-window {
+  display: none !important;
+}
