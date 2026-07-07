@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>Omid YouTube FA Subtitle</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="title">زیرنویس فارسی یوتیوب</div>
+    <div class="sub">Real Player Caption Capture</div>
+  </header>
+
+  <section>
+    <label for="trackSelect">ترک زیرنویس موجود</label>
+    <select id="trackSelect">
+      <option value="">در حال خواندن...</option>
+    </select>
+    <button id="refreshTracks" class="secondary">رفرش ترک‌ها</button>
+    <p class="hint">
+      افزونه URL واقعی زیرنویس را از خود YouTube Player می‌گیرد و خروجی JSON قابل ترجمه می‌سازد.
+    </p>
+  </section>
+
+  <section class="step">
+    <div class="stepTitle">۱) خروجی گرفتن</div>
+    <button id="downloadJson">دانلود JSON برای ترجمه</button>
+    <button id="downloadPrompt" class="secondary">دانلود پرامپت آماده</button>
+  </section>
+
+  <section class="step">
+    <div class="stepTitle">۲) بارگذاری ترجمه</div>
+    <input id="fileInput" type="file" accept=".json,application/json" />
+    <button id="loadTranslated">بارگذاری زیرنویس فارسی روی ویدیو</button>
+    <button id="clearSubs" class="danger">پاک کردن زیرنویس این ویدیو</button>
+  </section>
+
+  <section class="settings">
+    <div class="stepTitle">تنظیم نمایش</div>
+
+    <label for="fontSize">اندازه فونت: <span id="fontSizeValue">24</span>px</label>
+    <input id="fontSize" type="range" min="14" max="44" value="24" />
+
+    <label for="bottom">فاصله از پایین: <span id="bottomValue">12</span>%</label>
+    <input id="bottom" type="range" min="4" max="32" value="12" />
+
+    <label class="check">
+      <input id="enabled" type="checkbox" checked />
+      نمایش زیرنویس فعال باشد
+    </label>
+  </section>
+
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
