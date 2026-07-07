@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Omid YouTube FA Subtitle",
+  "version": "1.1.0",
+  "description": "Extract real YouTube captions to translation-ready JSON and display Persian subtitles as an RTL overlay.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://*.youtube.com/*"
+  ],
+  "action": {
+    "default_title": "FA Subtitle",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["src/inject-main.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/overlay.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
