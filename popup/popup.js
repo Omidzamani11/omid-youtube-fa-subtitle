@@ -103,7 +103,7 @@ $("refreshTracks").addEventListener("click", loadTracks);
 $("downloadJson").addEventListener("click", async () => {
   try {
     const trackIndex = Number(trackSelect.value || 0);
-    setStatus("در حال گرفتن زیرنویس...");
+    setStatus("در حال فعال‌کردن موقت caption و گرفتن URL واقعی...");
     const res = await sendToTab({ type: "DOWNLOAD_WORKFILE_JSON", trackIndex });
 
     if (!res?.ok) throw new Error(res?.error || "خروجی گرفتن ناموفق بود.");

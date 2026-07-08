@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Omid YouTube FA Subtitle",
   "version": "1.1.0",
-  "description": "Extract real YouTube captions to translation-ready JSON and display Persian subtitles as an RTL overlay.",
+  "description": "Extract real YouTube player captions to JSON, translate manually, reload Persian subtitles, and show them over the video.",
   "permissions": ["storage", "activeTab"],
   "host_permissions": [
     "https://www.youtube.com/*",
